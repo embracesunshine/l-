@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+:root,body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.wrapper {
+    width: 500px;
+    height: 320px;
+    box-sizing: border-box;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 20%;
+}
+
+.wrapper > .box {
+    width:  100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper > .box > .image-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+}
+
+.wrapper > .box > .image-list > li > img {
+    width: 100%;
+    height: 100%;
+}
+
+.left-btn, .right-btn {
+    position: absolute;
+    width: 30px;
+    height: 48px;
+    background-color: rgba(0,0,0,0.1);
+    top: calc(50% - 24px);
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+.left-btn {
+    left: 5px;
+}
+
+.right-btn{
+    right: 5px;
+}
+
+.box > .dot {
+    position: absolute;
+    bottom: 10px;
+}
+
+.box > .dot > span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: orange;
+    cursor: pointer;
+    margin: 0 5px;
+    user-select: none;
+}
+
+.box > .dot > span:nth-of-type(-n+1) {
+    background-color: #f40;
+}
